@@ -70,7 +70,7 @@ body {
 /* home page background image */
 .bgimage {
   height: 100vh;
-  background: url("images/bgimage.jpeg");
+  background: url("../images/bgimage.jpeg");
   background-size: cover;
   position: relative;
   padding: 0;
