@@ -46,7 +46,7 @@ form.addEventListener("submit", (event) => {
     })
     .then((response) => {
       document.getElementById("result").innerText =
-        "message sent successfully!";
+        "thanks for reaching out!";
     })
     .catch((error) => {
       document.getElementById("result").innerText =
