@@ -21,8 +21,11 @@ form.addEventListener("submit", (event) => {
 
   const { name, email, subject, message } = event.target;
 
-  const endpoint =
-    "https://9ifq3qed67.execute-api.us-east-2.amazonaws.com/default/sendContactEmail";
+  // trigger endpoint
+  // const endpoint = "https://9ifq3qed67.execute-api.us-east-2.amazonaws.com/default/sendContactEmail";
+
+  // function url
+  const endpoint = "https://4t3slgj34wkpwg5m55amrhoa540jqbmv.lambda-url.us-east-2.on.aws/";
 
   // use JSON.stringify so the data can be sent as a string via HTTP
   const body = JSON.stringify({
