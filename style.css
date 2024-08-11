@@ -143,6 +143,12 @@ body {
   transition: all .3s ease-in-out;
 }
 
+.link.hover {
+  color: palevioletred;
+  text-decoration: none;
+  position: relative;
+}
+
 .link:hover::before {
   bottom: 0;
   height: 100%;
