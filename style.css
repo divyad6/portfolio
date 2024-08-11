@@ -83,6 +83,24 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: whitesmoke;
   text-align: center;
+  overflow: hidden; 
+  border-right: .30em solid whitesmoke;
+  white-space: nowrap;
+  animation:
+    typing 4s steps(40, end) forwards, 
+    blinking 1s step-end infinite; 
+  width: 0; 
+  display: inline-block; 
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinking {
+  from { border-color: transparent; }
+  to { border-color: whitesmoke; }
 }
 
 .hero-text {
@@ -103,6 +121,31 @@ body {
   height: 250px;
   width: 250px;
   margin-bottom: 30px;
+}
+
+/* styling for volunteering link */
+.link {
+  color: palevioletred;
+  text-decoration: none;
+  position: relative;
+}
+
+.link::before {
+  color: darkslategray;
+  content: '';
+  background-color: hsla(333, 100%, 85%, 0.856);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 3px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+.link:hover::before {
+  bottom: 0;
+  height: 100%;
 }
 
 /* navbar visibility fade transition */
@@ -141,12 +184,18 @@ body {
 }
 
 .card-title {
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 /* card button alignment */
 .card-body .text-center {
   margin-top: auto;
+}
+
+/* center align cards on screen */
+.row.justify-content-center {
+  display: flex;
+  justify-content: center;
 }
 
 .social-icons {
